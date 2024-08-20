@@ -111,7 +111,7 @@ hooks.Filters.ENV_PATCHES.add_items(
 RUN npm install universal-cookie
 
 RUN npm install '@edx/brand@npm:@edly-io/indigo-brand-openedx@^2.1.0'
-RUN npm install '@edx/frontend-component-header@npm:@edly-io/indigo-frontend-component-header@^3.1.0'
+RUN npm install '@edx/frontend-component-header@npm:@edly-io/indigo-frontend-component-header@^3.1.1'
 RUN npm install @edly-io/indigo-frontend-component-footer@^2.0.0
 
 COPY indigo/env.config.jsx /openedx/app/
@@ -130,7 +130,7 @@ RUN npm install '@edx/brand@npm:@edly-io/indigo-brand-openedx@^2.1.0'
             """
 RUN npm install universal-cookie
 RUN npm install '@edx/brand@npm:@edly-io/indigo-brand-openedx@^2.1.0'
-RUN npm install '@edx/frontend-component-header@npm:@edly-io/indigo-frontend-component-header@^3.1.0'
+RUN npm install '@edx/frontend-component-header@npm:@edly-io/indigo-frontend-component-header@^3.1.1'
 RUN npm install @edly-io/indigo-frontend-component-footer@^2.0.0
 
 COPY indigo/env.config.jsx /openedx/app/
@@ -149,7 +149,7 @@ COPY indigo/env.config.jsx /openedx/app/
             "mfe-dockerfile-post-npm-install-profile",
             """
 RUN npm install '@edx/brand@npm:@edly-io/indigo-brand-openedx@^2.1.0'
-RUN npm install '@edx/frontend-component-header@npm:@edly-io/indigo-frontend-component-header@^3.1.0'
+RUN npm install '@edx/frontend-component-header@npm:@edly-io/indigo-frontend-component-header@^3.1.1'
 RUN npm install @edly-io/indigo-frontend-component-footer@^2.0.0
 
 COPY indigo/env.config.jsx /openedx/app/
@@ -160,7 +160,7 @@ COPY indigo/env.config.jsx /openedx/app/
             "mfe-dockerfile-post-npm-install-account",
             """
 RUN npm install '@edx/brand@npm:@edly-io/indigo-brand-openedx@^2.1.0'
-RUN npm install '@edx/frontend-component-header@npm:@edly-io/indigo-frontend-component-header@^3.1.0'
+RUN npm install '@edx/frontend-component-header@npm:@edly-io/indigo-frontend-component-header@^3.1.1'
 RUN npm install @edly-io/indigo-frontend-component-footer@^2.0.0
 
 COPY indigo/env.config.jsx /openedx/app/
@@ -207,4 +207,3 @@ MFE_CONFIG['THEME_COOKIE_NAME'] = '{{ INDIGO_THEME_COOKIE_NAME }}'
         ),
     ]
 )
-
