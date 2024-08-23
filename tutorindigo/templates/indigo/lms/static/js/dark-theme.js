@@ -1,8 +1,24 @@
 $(document).ready(function() {
     'use strict';
 
-    const enableDarkTheme = {% if INDIGO_ENABLE_DARK_THEME %}true{% else %}false{% endif %};
-    if (enableDarkTheme){
+    {% if INDIGO_THEME_COOKIE_NAME %}
+    function loadTheme(){
+      if($.cookie("{{ INDIGO_THEME_COOKIE_NAME }}") === 'dark'){
         $('body').addClass("indigo-dark-theme");
+      }
     }
+    
+    function toggleTheme(){
+      if($.cookie("{{ INDIGO_THEME_COOKIE_NAME }}") === 'dark'){
+        $.cookie("{{ INDIGO_THEME_COOKIE_NAME }}", 'light', { domain: window.location.hostname, expires: 7, path: '/' });
+        $('body').removeClass("indigo-dark-theme");
+      } else {
+        $.cookie("{{ INDIGO_THEME_COOKIE_NAME }}", 'dark', { domain: window.location.hostname, expires: 7, path: '/' });
+        $('body').addClass("indigo-dark-theme");
+      }
+    }
+
+    loadTheme();
+    $('#toggle-theme').click(toggleTheme);
+    {% endif %}
 });
